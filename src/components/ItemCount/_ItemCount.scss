@@ -1,0 +1,34 @@
+@import '../../variables';
+
+.cart-btn-div {
+    margin: 10px 100px;
+
+    width: 200px;
+    padding: 2px 20px;
+    border-radius: 5px;
+
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cart-btn {
+        color: #BC7526;
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.add-cart-btn {
+    margin: 10px 100px;
+
+    border: solid 1px $dark-brand-color;
+    border-radius: 5px;
+    
+    width: 200px;
+    padding: 10px 20px;
+
+    background-color: white;
+    color: $dark-brand-color;
+}

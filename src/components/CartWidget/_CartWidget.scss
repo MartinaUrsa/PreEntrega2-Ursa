@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.icons {
+    .cart {
+        display: flex;
+        cursor: pointer;
+
+        p {
+            position: absolute;
+            top: 3.2rem;
+            right: 0.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}

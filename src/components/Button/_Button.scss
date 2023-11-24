@@ -1,0 +1,22 @@
+@import "../../variables";
+
+button {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+
+    background-color: $brand-gray-color;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: #5e5e5e;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        width: 20px;
+        height: 15px;
+    }
+}

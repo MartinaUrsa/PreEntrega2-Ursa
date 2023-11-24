@@ -1,0 +1,62 @@
+@import '../../variables';
+
+
+.footer {
+    background-color: $brand-gray-color;
+    padding: 20px;
+    display: grid;
+    margin-top: 100px;
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 15px;
+        row-gap: 10px;
+        margin-bottom: 20px;
+
+        li {
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+
+    .socials-footer {
+        margin: auto;
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .tarjetas {
+        width: 90%;
+        max-width: 600px;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+
+    .address {
+        display: none;
+    }
+}
+
+@media (min-width: 48rem) {
+    .footer {
+        .address {
+            display: block;
+            margin: auto;
+            color: white;
+            font-size: 13px;
+        }
+    }
+}

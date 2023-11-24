@@ -1,0 +1,23 @@
+
+.whatsapp-logo {
+    width: 40px;
+    aspect-ratio: 1;
+
+    cursor: pointer;
+
+    position: fixed;
+    bottom: 30px;
+    right: 13px;
+
+    &:hover {
+        transform: scale(1.07);
+    }
+}
+
+
+@media (min-width: 48rem) {
+    .whatsapp-logo {
+        width: 45px;
+        right: 25px;
+    }
+}
