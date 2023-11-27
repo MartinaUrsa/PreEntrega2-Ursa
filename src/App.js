@@ -2,16 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Style
 import './_App.scss';
 // Components
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Layout from "./components/Layout";
-
 import Inicio from "./pages/Inicio/Inicio";
 import Productos from "./pages/Productos/Productos";
-import Contacto from "./pages/Contacto/Contacto";
-import Nosotros from "./pages/Nosotros/Nosotros";
-import TyC from "./pages/TyC/TyC";
-import Hogar from "./pages/Productos/Hogar";
+import ItemDetailContainer from "./components/Items/ItemDetailContainer";
+import ItemListContainer from "./components/Items/ItemListContainer";
+
 
 function App() {
 
@@ -22,15 +18,13 @@ function App() {
 
         <Route path="/" element={<Layout />}>
 
-          <Route index element={<Inicio />}/>
-          <Route path="productos" element={<Productos />}>
-            <Route path="productos/hogar&jardin" element={<Hogar />}/>
-            <Route path="productos/imanes" element={<Hogar />}/>
-            <Route path="productos/trampas-magneticas" element={<Hogar />}/>
-          </Route>
-          <Route path="contacto" element={<Contacto />}/>
-          <Route path="nosotros" element={<Nosotros />}/>
-          <Route path="tyc" element={<TyC />}/>
+            <Route index element={<Inicio />}/>
+            {/* Productos */}
+            <Route path="/productos" element={<Productos />}/>
+            {/* Ver filtrado por categorías */}
+            <Route path="/productos/:category" element={<ItemListContainer />}/>
+            {/* Ver detalle de cada producto*/}
+            <Route path="/items/:itemId" element={<ItemDetailContainer />}/>
 
         </Route>
 

@@ -1,61 +1,67 @@
 [
     {
     "id": 1,
-    "category": "Hogar y jardín",
-    "sub-category": "discos de arado",
+    "category": "hogar&jardin",
     "title": "Disco de Arado con Tapa 32 a 36 cm",
     "price": "30.000",
     "pictureUrl": "https://drive.google.com/uc?id=1GT5HBnQHyGm9z_3MX-FCYg1pxIptlLgJ",
-    "altImg": "Disco de arado con tapa 32 a 36 cm"
+    "altImg": "Disco de arado con tapa 32 a 36 cm",
+    "description": "Descripción de producto abcdefg",
+    "stock": 7
     },
 
     {
     "id": 2,
-    "category": "Hogar y jardín",
-    "sub-category": "tablas de madera",
+    "category": "hogar&jardin",
     "title": "Tabla de Madera Algarrobo Gigante",
     "price": "4.620",
     "pictureUrl": "https://drive.google.com/uc?id=1JspTi-6Zbz2nt-g15_CERRU6aP0YnNNp",
-    "altImg": "Tabla de Madera Algarrobo Gigante"
+    "altImg": "Tabla de Madera Algarrobo Gigante",
+    "description": "Descripción de producto abcdefg",
+    "stock": 12
     },
 
     {
     "id": 3,
-    "category": "Hogar y jardín",
-    "sub-category": "parrillas",
+    "category": "hogar&jardin",
     "title": "Parrilla Completa Premium - caño estructural",
     "price": "xxxxx",
     "pictureUrl": "https://drive.google.com/uc?id=10Q893JWNsY0BNa3-S4HMmoIdiMckMgGM",
-    "altImg": "Parrilla estructural completa"
+    "altImg": "Parrilla estructural completa",
+    "description": "Descripción de producto abcdefg",
+    "stock": 4
     },
 
     {
     "id": 4,
-    "category": "Hogar y jardín",
-    "sub-category": "parrillas",
+    "category": "hogar&jardin",
     "title": "Carro Asador con Cruz Premium- caño estructural",
     "price": "xxxxx",
     "pictureUrl": "https://drive.google.com/uc?id=1d2Magda91h2upxSmWkn9WkZjMC3GzwIm",
-    "altImg": "Carro asador con cruz - caño estructural"
+    "altImg": "Carro asador con cruz - caño estructural",
+    "description": "Descripción de producto abcdefg",
+    "stock": 2
     },
 
     {
     "id": 5,
-    "category": "Hogar y jardín",
-    "sub-category": "parrillas",
+    "category": "hogar&jardin",
     "title": "Rocket Cocina Cohete Fogonero",
     "price": "15.246",
     "pictureUrl": "https://drive.google.com/uc?id=1pZvW0fQtktrpidCRxyRBnTufYY0sYBMT",
-    "altImg": "Rocket Cocina Cohete Fogonero"
+    "altImg": "Rocket Cocina Cohete Fogonero",
+    "description": "Descripción de producto abcdefg",
+    "stock": 5
     },
 
     {
     "id": 6,
-    "category": "Hogar y jardín",
-    "sub-category": "pileta",
+    "category": "pileta",
     "title": "Esquinero Simple Pileta de Lona 32mm",
     "price": "800",
     "pictureUrl": "https://drive.google.com/uc?id=1AXWonOvubbBNYnOccfVOBm8EU9d5Z8u6",
-    "altImg": "Esquinero Simple Pileta de Lona 32mm"
+    "altImg": "Esquinero Simple Pileta de Lona 32mm",
+    "description": "Descripción de producto abcdefg",
+    "stock": 15
     }
 ]

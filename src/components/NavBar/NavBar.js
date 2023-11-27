@@ -21,9 +21,13 @@ const NavBar = () => {
 
                 <ul className="navbar" id="navbar" data-visible="false">
                     <li className="active"><Link to="/">INICIO</Link></li>
-                    <li><Link to="productos">PRODUCTOS</Link></li>
+                    <li><Link to="productos" className='nav-productos'>PRODUCTOS</Link></li>
                     <li><Link to="contacto">CONTACTO</Link></li>
                     <li><Link to="nosotros">NOSOTROS</Link></li>
+
+                    <Link to="/productos/hogar&jardin">Hogar y Jardín</Link>
+                    <Link to="/productos/pileta">Pileta</Link>
+
                 </ul>
 
                 <div class="icons">

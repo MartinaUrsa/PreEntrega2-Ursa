@@ -8,6 +8,7 @@
     .item {
         overflow: hidden;
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
             transform: scale(1.02);
