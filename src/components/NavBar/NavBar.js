@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // Style
 import './_NavBar.scss';
 // Icons
@@ -8,9 +8,14 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 // Components
 import CartWidget from '../CartWidget/CartWidget';
+import { useEffect, useState } from 'react';
+
 
 
 const NavBar = () => {
+
+    const location = useLocation().pathname;
+
     return (
         <nav className="primary-header">
             <section className="nav">
@@ -20,10 +25,10 @@ const NavBar = () => {
                 </div>
 
                 <ul className="navbar" id="navbar" data-visible="false">
-                    <li className="active"><Link to="/">INICIO</Link></li>
-                    <li><Link to="productos" className='nav-productos'>PRODUCTOS</Link></li>
-                    <li><Link to="contacto">CONTACTO</Link></li>
-                    <li><Link to="nosotros">NOSOTROS</Link></li>
+                    <li><Link to="/" className={location === "/" ? "active" : ""}>INICIO</Link></li>
+                    <li><Link to="productos" className={location == "/productos" ? "active" : ""}>PRODUCTOS</Link></li>
+                    <li><Link to="contacto" className={location === "/contacto" ? "active" : ""}>CONTACTO</Link></li>
+                    <li><Link to="nosotros" className={location === "/nosotros" ? "active" : ""}>NOSOTROS</Link></li>
                 </ul>
 
                 <div class="icons">

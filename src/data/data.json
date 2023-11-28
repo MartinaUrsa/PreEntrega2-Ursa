@@ -56,7 +56,7 @@
 
     {
     "id": 6,
-    "category": "pileta",
+    "category": "hogar&jardin",
     "title": "Esquinero Simple Pileta de Lona 32mm",
     "price": "800,00",
     "pictureUrl": "https://drive.google.com/uc?id=1AXWonOvubbBNYnOccfVOBm8EU9d5Z8u6",
@@ -68,12 +68,44 @@
     {
         "id": 7,
         "category": "imanes",
-        "title": "Imán Neodimio Anillo 10-4x3mm",
-        "price": "1.387,00",
-        "pictureUrl": "https://drive.google.com/uc?id=1RwV7UD1BGUwOgQWIkQKook5cuNpZtcHL",
-        "altImg": "Imán Neodimio Anillo 10-4x3mm",
+        "title": "Imán Cerámico Ferrite Anillo 17-7x3mm",
+        "price": "427,00",
+        "pictureUrl": "https://drive.google.com/uc?id=1M3XQyNSusLRId0HHQMyf6X-kSnffwLYl",
+        "altImg": "Imán Cerámico Ferrite Anillo 17-7x3mm",
         "description": "Descripción de producto abcdefg",
-        "stock": 22
-        }
+        "stock": 2
+    },
 
+    {
+        "id": 8,
+        "category": "imanes",
+        "title": "Imán Cerámico Ferrite Anillo 32-18x4mm",
+        "price": "1.064,00",
+        "pictureUrl": "https://drive.google.com/uc?id=1opKBuR_WYfXIGzWK8sjwriGf4_2Cdbj4",
+        "altImg": "Imán Cerámico Ferrite Anillo 32-18x4mm",
+        "description": "Descripción de producto abcdefg",
+        "stock": 35
+    },
+
+    {
+        "id": 9,
+        "category": "imanes",
+        "title": "Imán Neodimio Circular 5x8mm",
+        "price": "1.645,00",
+        "pictureUrl": "https://drive.google.com/uc?id=1PUirDLrJyCSxQJ5CbydaTqYuYQCx9xtR",
+        "altImg": "Imán Neodimio Circular 5x8mm",
+        "description": "Descripción de producto abcdefg",
+        "stock": 35
+    },
+
+    {
+        "id": 10,
+        "category": "imanes",
+        "title": "Imán Neodimio Circular 15x2mm",
+        "price": "1.659,00",
+        "pictureUrl": "https://drive.google.com/uc?id=1BLgDnQ2KyHXW73aT5DXvKFXnBPsaiCAo",
+        "altImg": "Imán Neodimio Circular 15x2mm",
+        "description": "Descripción de producto abcdefg",
+        "stock": 35
+    }
 ]

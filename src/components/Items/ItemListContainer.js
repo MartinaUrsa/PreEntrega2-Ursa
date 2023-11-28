@@ -6,7 +6,7 @@ import ItemList from './ItemList.js';
 import data from "../../data/data.json";
 
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -14,8 +14,6 @@ const ItemListContainer = () => {
     const [titulo, setTitulo] = useState("Productos")
 
     const category = useParams().category;
-    console.log(category);
-
 
     const getProductsFromData = () => {
         return new Promise((resolve) => {
@@ -24,7 +22,6 @@ const ItemListContainer = () => {
             }, 500)
         })
     }
-
 
     useEffect(() => {
         getProductsFromData()

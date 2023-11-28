@@ -21,7 +21,6 @@ const ItemDetail = ( {product} ) => {
                     <h3>{product.title}</h3>
                     <p className="price">${product.price}</p>
                     <p>{product.description}</p>
-
                     <div className="actions">
                         <AddToCart />
                         <button className="volver"><Link to={`/productos/${product.category}`}>Volver</Link></button>
