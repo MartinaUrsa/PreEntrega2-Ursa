@@ -1,14 +1,19 @@
+@import "../../variables"; 
+
 .items-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 270px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
     justify-content: space-evenly;
-    gap: 4.375rem;
+    gap: 35px;
     margin: 3.125rem;
 
     .item {
         overflow: hidden;
         cursor: pointer;
         text-decoration: none;
+        border: solid 1px lightgrey;
+        border-radius: 5px;
+        padding: 10px;
 
         &:hover {
             transform: scale(1.02);
@@ -22,7 +27,7 @@
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 15px;
             padding-bottom: 5px;
         }
 
@@ -33,6 +38,21 @@
 }
 
 
+.categoryBtns {    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 
+    .categoryBtn {
+        padding: 5px 10px;
+        margin-bottom: 30px;
+        outline: none;
+        border-radius: 5px;
 
+        &:hover {
+            background-color: #868686;
+            color: white;
+        }
+    }
+}
 
