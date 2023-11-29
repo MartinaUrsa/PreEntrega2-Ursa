@@ -15,16 +15,17 @@ const ItemListContainer = () => {
 
     const category = useParams().category;
 
-    const getProductsFromData = () => {
+
+    const getProducts = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(data)
-            }, 500)
+            }, 1000)
         })
     }
 
     useEffect(() => {
-        getProductsFromData()
+        getProducts()
             .then((res) => {
                 if(category) {
                     setTitulo(category)
@@ -40,8 +41,10 @@ const ItemListContainer = () => {
     }, [category])
 
     return (
-        <div className='ItemListContainer'>   
-            {loading ? "Cargando..." : <ItemList products={products} titulo={titulo}/>}
+        <div>
+            <div className='ItemListContainer'>   
+                {loading ? "Cargando..." : <ItemList products={products} titulo={titulo}/>}
+            </div>
         </div>
     )
 }

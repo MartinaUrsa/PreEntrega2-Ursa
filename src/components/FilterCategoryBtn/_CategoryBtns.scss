@@ -1,0 +1,22 @@
+.categoryBtns {    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .categoryBtn {
+        padding: 5px 10px;
+        margin-bottom: 30px;
+        outline: none;
+        border-radius: 5px;
+        color: white;
+
+        &:hover {
+            background-color: #868686;
+        }
+    }
+}
+
+.activeCategory {
+    background-color: #868686;
+    color: white;
+}

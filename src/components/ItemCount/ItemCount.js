@@ -23,17 +23,8 @@ const ItemCount = () => {
 }
 
 const AddToCart = () => {
-
-    const [addItem, setAddItem] = useState('');
-
-    const clickAdd = () => {
-        return (
-            setAddItem(<ItemCount />)
-        )
-    }
-
     return (
-        <button className='add-cart-btn' onClick={clickAdd}>Agregar al carrito</button>
+        <button className='add-cart-btn'>Agregar al carrito</button>
     )
 }
 

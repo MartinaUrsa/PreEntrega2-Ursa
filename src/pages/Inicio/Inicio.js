@@ -24,7 +24,7 @@ const Inicio = () => {
 
             <div className="products">
                 <div className="products-title">
-                    <h2>Nuestros productos</h2>
+                    <h3>Nuestros productos</h3>
                     <div className="line"></div>
                 </div>
                 <div className="products-preview">

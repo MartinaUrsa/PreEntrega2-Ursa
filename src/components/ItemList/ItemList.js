@@ -1,18 +1,21 @@
-import Item from "./Item";
-import "./_ItemList.scss";
 import { Link } from "react-router-dom";
+// Style
+import "./_ItemList.scss";
+// Components
+import Item from "./Item";
+import FilterCategoryBtn from "../FilterCategoryBtn/FilterCategoryBtn";
 
 const ItemList = ( {products, titulo} ) => {
 
     return (
         <div>
-            <div className="categoryBtns">
-                <button className='categoryBtn'><Link to="/productos">Todos</Link></button>
-                <button className='categoryBtn'><Link to="/productos/hogar&jardin">Hogar & Jardín</Link></button>
-                <button className='categoryBtn'><Link to="/productos/imanes">Imanes</Link></button>
+            <div className="categoryTitle">
+                <h3>{titulo}</h3>
+                <div className="line"></div>
             </div>
 
-            <h2>{titulo}</h2>
+            <FilterCategoryBtn />
+
             <div className="items-container">
                 {
                     products.map((product) => {
