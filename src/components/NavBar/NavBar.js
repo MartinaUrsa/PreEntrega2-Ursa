@@ -26,7 +26,7 @@ const NavBar = () => {
 
                 <ul className="navbar" id="navbar" data-visible="false">
                     <li><Link to="/" className={location === "/" ? "active" : ""}>INICIO</Link></li>
-                    <li><Link to="productos" className={location == "/productos" ? "active" : ""}>PRODUCTOS</Link></li>
+                    <li><Link to="productos" className={location.includes("/productos") ? "active" : ""}>PRODUCTOS</Link></li>
                     <li><Link to="contacto" className={location === "/contacto" ? "active" : ""}>CONTACTO</Link></li>
                     <li><Link to="nosotros" className={location === "/nosotros" ? "active" : ""}>NOSOTROS</Link></li>
                 </ul>
@@ -43,7 +43,6 @@ const NavBar = () => {
                 </Link>
                 <h2>Quincho, jardín & imanes</h2>
             </div>
-
             <button className="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false">
                 <span className="sr-only">Menu</span>
             </button>

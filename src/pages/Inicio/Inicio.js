@@ -28,13 +28,13 @@ const Inicio = () => {
                     <div className="line"></div>
                 </div>
                 <div className="products-preview">
-                    <Link to="productos/hogar&jardin">
+                    <Link to="productos/Hogar%20&%20Jardin">
                         <div className="product-card">
                             <img src="https://drive.google.com/uc?id=10Q893JWNsY0BNa3-S4HMmoIdiMckMgGM"/>
                             <p className="category-name">Hogar & Jardín</p>
                         </div>
                     </Link>
-                    <Link to="productos/imanes">
+                    <Link to="productos/Imanes">
                         <div className="product-card">
                             <img src={imanes}/>
                             <p className="category-name">Imanes</p>
