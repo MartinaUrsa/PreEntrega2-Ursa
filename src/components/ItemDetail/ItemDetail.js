@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { AddToCart } from "../ItemCount/ItemCount";
+import { AddToCart, ItemCount } from "../ItemCount/ItemCount";
 // Style
 import "./_ItemDetail.scss";
+import { useState } from "react";
 
 const ItemDetail = ( {product} ) => {
 
@@ -21,7 +22,8 @@ const ItemDetail = ( {product} ) => {
                     <p className="description">{description}</p>
 
                     <div className="actions">
-                        <AddToCart />
+                        <ItemCount />
+                        
                         {/* Botón para volver a la página anterior */}
                         <button className="volver" onClick={() => navigate(-1)}>Volver</button>
                     </div>
