@@ -32,8 +32,16 @@
     font-weight: 500;
 
     &:hover {
-        background-color: $dark-brand-color;
-        color: white;
+        background-color: white;
         transform: scale(1.02);
     }
+}
+
+.sin-stock {
+    background-color: $dark-brand-color;
+    font-size: .8331rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: white;
+    border-radius: 5px;
 }

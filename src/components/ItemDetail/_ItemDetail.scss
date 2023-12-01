@@ -24,14 +24,22 @@
                 color: $dark-brand-color;
             }
     
-            .actions {
+            .actions-container {
+                width: 320px;
                 display: flex;
-                gap: 20px;
-    
-                .volver {
-                    border-radius: 5px;
-                    color: white;
-                    font-weight: 500;
+                flex-direction: column;
+                gap: 10px;
+
+                .actions {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+        
+                    .volver {
+                        border-radius: 5px;
+                        color: white;
+                        font-weight: 500;
+                    }
                 }
             }
         }

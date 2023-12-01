@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { AddToCart, ItemCount } from "../ItemCount/ItemCount";
+import ItemCount from "../ItemCount/ItemCount.js";
 // Style
 import "./_ItemDetail.scss";
-import { useState } from "react";
+import TerminarCompra from "../TerminarCompra/TerminarCompra.js";
+
 
 const ItemDetail = ( {product} ) => {
 
-    const {pictureUrl, altImg, title, price, description} = product;
+    const {pictureUrl, altImg, title, price, description, stock} = product;
 
     const navigate = useNavigate();
 
@@ -21,11 +22,13 @@ const ItemDetail = ( {product} ) => {
                     <p className="price">${price}</p>
                     <p className="description">{description}</p>
 
-                    <div className="actions">
-                        <ItemCount />
-                        
-                        {/* Botón para volver a la página anterior */}
-                        <button className="volver" onClick={() => navigate(-1)}>Volver</button>
+                    <div className="actions-container">
+                        <div className="actions">
+                            <ItemCount product={product}/>
+                            {/* Botón para volver a la página anterior */}
+                            <button className="volver" onClick={() => navigate(-1)}>Volver</button>
+                        </div>
+                        <TerminarCompra />
                     </div>
                 </div>
             </div>

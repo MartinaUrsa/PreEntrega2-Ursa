@@ -1,0 +1,16 @@
+.error-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .error {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 100px;
+    }
+    .volver {
+        color: white;
+        width: 100px;
+    }
+}

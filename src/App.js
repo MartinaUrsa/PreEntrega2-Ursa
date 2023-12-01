@@ -9,6 +9,7 @@ import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer.js"
 import ItemListContainer from "./components/ItemList/ItemListContainer.js";
 import Contacto from "./pages/Contacto.js";
 import Nosotros from "./pages/Nosotros.js";
+import Error404 from "./components/Error404/Error404.js";
 
 function App() {
 
@@ -25,13 +26,15 @@ function App() {
             {/* Ver filtrado por categorías */}
             <Route path="/productos/:category" element={<ItemListContainer />}/>
             {/* Ver detalle de cada producto*/}
-            <Route path="/items/:itemId" element={<ItemDetailContainer />}/>
-            
+            <Route path="/productos/:categoryId/:itemId" element={<ItemDetailContainer />}/>
+
             <Route path="/contacto" element={<Contacto />}/>
             <Route path="/nosotros" element={<Nosotros />}/>
             <Route path="/productos/trampas-magneticas" element="Proximamente..." />
 
         </Route>
+
+        <Route path="*" element={<Error404 />}/>
 
       </Routes>
 

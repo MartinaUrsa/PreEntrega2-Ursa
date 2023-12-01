@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.terminar-compra {
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: $dark-brand-color;
+    font-weight: 500;
+
+    &:hover {
+        background-color: $dark-brand-color;
+    }
+}

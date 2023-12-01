@@ -3,47 +3,58 @@ import { useState } from "react";
 
 
 // ItemCount
-const ItemCount = () => {
+const ItemCount = ({product}) => {
+
     
-    // Desestructuro el hook useState para poder manipular los estados del botón ItemCount
-    const [count, setCount] = useState(1);
+    const [quantity, setQuantity] = useState(1);
     const [showAddToCart, setShowAddToCart] = useState(true);
 
-    // Creo funciones para poder sumar y restar la cantidad
-    const handleClickResta = () => {
-        if(count > 0) {
-            setCount(count - 1)
-        }
+    const checkStock = product.stock;
 
-        if(count == 1) {
-            setShowAddToCart(true)
-        }
+    // Creo funciones para poder sumar y restar la cantidad en ItemCount
+    const handleClickResta = () => {
+        quantity > 1 && setQuantity(quantity - 1);
+
+        quantity == 1 && setShowAddToCart(true);
+    }
+
+    const handleClickSumar = () => {
+        quantity < checkStock && setQuantity(quantity + 1);
     }
 
     const handleClickAddToCart  = () => {
-        setCount(1);
         setShowAddToCart(false);
     }
 
+    const AddToCart = () => {
+        return <button className='add-cart-btn' onClick={handleClickAddToCart}>Agregar al carrito</button>
+    }
+
+    const ProductsQuantity = () => {
+        return (
+            <div className='cart-btn-div'>
+                <button className="cart-btn" onClick={handleClickResta}>-</button>
+                <span>{quantity}</span>
+                <button className="cart-btn" onClick={handleClickSumar}>+</button>
+            </div>
+        )
+    }
+
     const whatToRender = () => {
-        if(showAddToCart) {
-            return <button className='add-cart-btn' onClick={handleClickAddToCart}>Agregar al carrito</button>
+        if(checkStock >= 1) {
+            return (showAddToCart ? <AddToCart /> : <ProductsQuantity />)
         }
         else {
-            return (
-                <div className='cart-btn-div'>
-                    <button className="cart-btn" onClick={handleClickResta}>-</button>
-                    <span>{count}</span>
-                    <button className="cart-btn" onClick={() => setCount(count + 1)}>+</button>
-                </div>
-            )
+            return <div className='sin-stock'>Sin stock</div>
         }
     }
 
+
     return (
         <div>
-            {whatToRender()}
+            <div>{whatToRender()}</div>
         </div>
     );
 }
-export { ItemCount };
+
+export default ItemCount;
