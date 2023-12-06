@@ -1,39 +1,40 @@
 @import '../../variables';
 
-.cart-btn-div {
-    border: solid 1px $dark-brand-color;
-    border-radius: 5px;
-    background-color: white;
-
-    width: 200px;
-    padding: 0px 20px;
-
+.cart-actions-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    .cart-btn {
-        color: #BC7526;
-        background-color: transparent;
-        border: none;
-        font-weight: 800;
-    }
-}
-
-.add-cart-btn {
-    border: solid 1px $dark-brand-color;
-    border-radius: 5px;
-    background-color: white;
     
-    width: 200px;
-    padding: 10px 20px;
-
-    color: $dark-brand-color;
-    font-weight: 500;
-
-    &:hover {
+    .cart-btn-div {
+        border: solid 1px $dark-brand-color;
+        border-radius: 5px;
         background-color: white;
-        transform: scale(1.02);
+    
+        width: 150px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    
+        .cart-btn {
+            color: #BC7526;
+            background-color: transparent;
+            border: none;
+            font-weight: 800;
+        }
+    }
+
+    .add-cart-btn {
+        border: solid 1px $dark-brand-color;
+        color: $dark-brand-color;
+        border-radius: 5px;
+        background-color: white;
+        font-weight: 500;
+
+        &:hover {
+            background-color: $dark-brand-color;
+            color: white;
+        }
     }
 }
 

@@ -2,7 +2,9 @@ import { useNavigate } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount.js";
 // Style
 import "./_ItemDetail.scss";
-import TerminarCompra from "../TerminarCompra/TerminarCompra.js";
+import { useContext, useState } from "react";
+import { CartContext } from "../Context/CartContext.js";
+import CartPreview from "../CartPreview/CartPreview.js";
 
 
 const ItemDetail = ( {product} ) => {
@@ -11,9 +13,25 @@ const ItemDetail = ( {product} ) => {
 
     const navigate = useNavigate();
 
+    const { carrito, addToCart } = useContext(CartContext);
+    console.log(carrito);
+
+    const [quantity, setQuantity] = useState(1);
+
+    const checkStock = product.stock;
+
+    // Creo funciones para poder sumar y restar la cantidad en ItemCount
+    const handleClickResta = () => {
+        quantity > 1 && setQuantity(quantity - 1);
+    }
+
+    const handleClickSuma = () => {
+        quantity < checkStock && setQuantity(quantity + 1);
+    }
+
+
     return (
         <div className="item-detail-container">
-
             <div className="item-detail">
                 <img src={pictureUrl} alt={altImg}/>
 
@@ -23,16 +41,16 @@ const ItemDetail = ( {product} ) => {
                     <p className="description">{description}</p>
 
                     <div className="actions-container">
-                        <div className="actions">
-                            <ItemCount product={product}/>
-                            {/* Botón para volver a la página anterior */}
-                            <button className="volver" onClick={() => navigate(-1)}>Volver</button>
-                        </div>
-                        <TerminarCompra />
+                        <ItemCount 
+                            quantity={quantity} 
+                            handleClickResta={handleClickResta} 
+                            handleClickSuma={handleClickSuma}
+                            handleAddToCart={() => {addToCart(product, quantity)}}/>  
+                        {/* Botón para volver a la página anterior */}
+                        <button className="volver" onClick={() => navigate(-1)}>Volver</button>
                     </div>
                 </div>
             </div>
-
         </div>
     )
 };

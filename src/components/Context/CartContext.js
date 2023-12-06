@@ -1,20 +1,20 @@
 import { createContext } from "react";
-import data from "../data/data.json";
-import AddToCartBtn from "./ItemCount/ItemCount";
+
 
 export const CartContext = createContext();
 
 
-const CartContextProvider = () => {
-    
-    const carrito = [];
-    
+const CartContextProvider = () => {    
     // addItem
     const addItem = ( item, quantity ) => {
 
         }
     } 
 
+    // isInCart
+    const isInCart = () => {
+
+    }
 
     // removeItem
     const removeItem = ( itemId ) => {
@@ -25,12 +25,6 @@ const CartContextProvider = () => {
     const clearCart = () => {
 
     } 
-
-
-    // isInCart
-    const isInCart = () => {
-
-    }
 
 export default CartContextProvider;
 

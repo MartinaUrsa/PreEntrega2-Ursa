@@ -19,27 +19,23 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            width: 400px;
             
             .price {
                 color: $dark-brand-color;
             }
     
             .actions-container {
-                width: 320px;
+                width: 340px;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
 
-                .actions {
-                    display: flex;
-                    justify-content: space-between;
-                    gap: 10px;
-        
-                    .volver {
-                        border-radius: 5px;
-                        color: white;
-                        font-weight: 500;
-                    }
+                .volver {
+                    width: 100%;
+                    border-radius: 5px;
+                    color: white;
+                    font-weight: 500;
                 }
             }
         }
