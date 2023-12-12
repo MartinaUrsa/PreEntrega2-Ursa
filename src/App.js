@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Style
 import './_App.scss';
 // Components
@@ -10,34 +10,13 @@ import ItemListContainer from "./components/ItemList/ItemListContainer.js";
 import Contacto from "./pages/Contacto.js";
 import Nosotros from "./pages/Nosotros.js";
 import Error404 from "./components/Error404/Error404.js";
-import { useState } from "react";
-import { CartContext } from "./components/Context/CartContext.js";
-import CartPreview from "./components/CartPreview/CartPreview.js";
+import CartContextProvider from "./components/Context/CartContext.js";
+import Cart from "./pages/Cart/Cart.js";
 
 function App() {
 
-  const [carrito, setCarrito] = useState([]);
-
-  const addToCart = (product, quantity) => {
-    const addedItem = {...product, quantity};
-
-    const isInCart = carrito.find((product) => product.id === addedItem.id);
-
-    if(isInCart) {
-        isInCart.quantity = quantity;
-    }
-    else {
-        setCarrito([ ...carrito, addedItem ]);
-    }
-}
-
-const cartQuantity = () => {
-  return carrito.length;
-}
-
   return (
-    <CartContext.Provider value={ {carrito, addToCart, cartQuantity} }>
-
+    <CartContextProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -52,13 +31,16 @@ const cartQuantity = () => {
                 <Route path="/contacto" element={<Contacto />}/>
                 <Route path="/nosotros" element={<Nosotros />}/>
                 <Route path="/productos/trampas-magneticas" element="Proximamente..." />
+
+                <Route path="/cart" element={<Cart />}/>
             </Route>
 
             <Route path="*" element={<Error404 />}/>
           </Routes>
         </BrowserRouter>
         
-    </CartContext.Provider>
+    </CartContextProvider>
+
   );
 
 }
