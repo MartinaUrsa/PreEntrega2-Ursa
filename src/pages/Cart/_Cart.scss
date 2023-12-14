@@ -4,6 +4,14 @@
 .cart-container {
     margin: 0 130px;
 
+    .volver {
+        background-color: rgb(187, 187, 187);
+        border-radius: 10px;
+        margin: 5px 0;
+        padding: 3px 10px;
+        font-weight: bold;
+    }
+
     .cart-header {
         display: flex;
         justify-content: space-between;

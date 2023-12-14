@@ -4,9 +4,12 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { useContext } from 'react'
 
 import "./_Cart.scss";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Cart = () => {
+
+    const navigate = useNavigate();
 
     const { carrito, precioTotal, emptyCart } = useContext(CartContext);
 
@@ -24,12 +27,13 @@ const Cart = () => {
                 <button className="vaciar-carrito" onClick={handleEmptyCart}>Vaciar carrito</button>
             </div>
 
-            { carrito.length === 0 ? "Parece que no hay nada en el carrito aún." : (
+            { carrito.length === 0 ? (<div><p>Parece que no hay nada en el carrito aún.</p><button className="volver" onClick={() => navigate(-1)}>Volver</button></div>) : (
                 <div>
                     <CartItemCard />
                     <div className="checkout-btns">
                         <div className="cart-total">Total carrito: ${precioTotal()}</div>
-                        <button className="checkout">Ir a pagar</button>
+                        <Link to="/cart/checkout"><button className="checkout">Ir a pagar</button></Link>
+                        
                     </div>
                 </div>
             ) }

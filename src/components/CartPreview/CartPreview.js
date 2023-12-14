@@ -34,7 +34,7 @@ const CartPreview = ({ toggleCartPreview }) => {
 
             <div className="cart-summary">
                 <div className="cart-total">Total carrito: ${precioTotal()}</div>
-                <TerminarCompra className="terminar-compra"/>
+                <TerminarCompra onClick={toggleCartPreview} className="terminar-compra"/>
                 <button className="vaciar-carrito" onClick={handleEmptyCart}>Vaciar carrito</button>
             </div>
         </div>

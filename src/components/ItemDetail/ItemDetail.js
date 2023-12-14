@@ -4,12 +4,11 @@ import ItemCount from "../ItemCount/ItemCount.js";
 import "./_ItemDetail.scss";
 import { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext.js";
-import CartPreview from "../CartPreview/CartPreview.js";
 
 
 const ItemDetail = ( {product} ) => {
 
-    const {pictureUrl, altImg, title, price, description, stock} = product;
+    const {pictureUrl, altImg, title, price, description} = product;
 
     const navigate = useNavigate();
 

@@ -20,9 +20,16 @@ const CartContextProvider = ({children}) => {
             setCarrito([ ...carrito, addedItem ]);
         }
     }
+
+    const deleteItem = (prod) => {
+        setCarrito(
+            carrito.filter(a =>
+            a.id !== prod.id)
+        );
+    }
     
     const cartQuantity = () => {
-        return carrito.length;
+        return carrito.reduce((acc, prod) => acc + prod.quantity, 0);
     }
     
     const precioTotal = () => (
@@ -39,7 +46,8 @@ const CartContextProvider = ({children}) => {
             addToCart, 
             cartQuantity, 
             precioTotal, 
-            emptyCart
+            emptyCart,
+            deleteItem
             } }> 
             {children}
         </CartContext.Provider>

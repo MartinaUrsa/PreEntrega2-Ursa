@@ -33,6 +33,7 @@ function App() {
                 <Route path="/productos/trampas-magneticas" element="Proximamente..." />
 
                 <Route path="/cart" element={<Cart />}/>
+                {/* <Route path="/cart/checkout" element={<Checkout />}/> */}
             </Route>
 
             <Route path="*" element={<Error404 />}/>

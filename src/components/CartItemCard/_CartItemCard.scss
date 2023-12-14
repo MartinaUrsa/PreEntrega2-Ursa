@@ -1,24 +1,33 @@
 
-.info-preview {
-    display: flex;
-    gap: 10px;
-    border: solid 1px lightgrey;
-    border-radius: 5px;
-    padding: 5px;
-
-    img {
-        width: 80px;
-        object-fit: contain;
-    }
-
-    .info-prod {
-        .title {
-            font-size: 16px;
+a {
+    text-decoration: none;
+    
+    .info-preview {
+        display: flex;
+        gap: 10px;
+        border: solid 1px lightgrey;
+        border-radius: 5px;
+        padding: 5px;
+    
+        img {
+            width: 80px;
+            object-fit: contain;
         }
-
-        p {
-            font-size: 15px;
+    
+        .info-prod {
+            .title {
+                font-size: 16px;
+            }
+    
+            p {
+                font-size: 15px;
+            }
         }
+    
+        .delete-item-icon {
+            font-size: 25px;
+            cursor: pointer;
+        }
+    
     }
-
 }
