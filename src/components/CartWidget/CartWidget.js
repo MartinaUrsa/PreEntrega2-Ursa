@@ -20,7 +20,7 @@ const CartWidget = () => {
         <div>
             <div className='cart-widget' onClick={toggleCartPreview}>
                 <FontAwesomeIcon icon={faCartShopping} style={{color: "#000000",}} />
-                <p>{cartQuantity()}</p>
+                {cartQuantity() > 0 && <p>{cartQuantity()}</p>}
             </div>
             {isPreviewOpen && <CartPreview toggleCartPreview={toggleCartPreview}/>}
         </div>

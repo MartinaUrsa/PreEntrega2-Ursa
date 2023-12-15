@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
 
 export const CartContext = createContext();
@@ -27,10 +28,11 @@ const CartContextProvider = ({children}) => {
             a.id !== prod.id)
         );
     }
-    
+
     const cartQuantity = () => {
         return carrito.reduce((acc, prod) => acc + prod.quantity, 0);
-    }
+    }    
+
     
     const precioTotal = () => (
         carrito.reduce((acc, prod) => acc + (prod.price * prod.quantity), 0)
