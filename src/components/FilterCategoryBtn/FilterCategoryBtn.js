@@ -2,34 +2,42 @@
 import "./_CategoryBtns.scss";
 
 import { Link } from "react-router-dom"
-import data from "../../data/data.json";
+// import data from "../../data/data.json";
 import { useEffect, useState } from "react";
+
+// Firebase
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
+
 
 const FilterCategoryBtn = () => {
 
     const [categories, setCategories] = useState([]);
 
-    const categorias = [];
-
-    data.forEach((item) => categorias.push((item.category)));
-
+    const productsRef = collection( db, "products" );
 
     useEffect(() => {
-        const filteredCategories = categorias.reduce(( values, category ) => {
-            if(!values.includes(category)) {
-                values.push(category)
-            };
-            return values;
-        }, ['Todos']);
+        getDocs(productsRef)
+            .then((res) => {
+                const allCategories = res.docs.reduce((categories, doc) => {
 
-        setCategories(filteredCategories); // determino cuáles son las categorías que quiero usar
-    }, []);
+                    const category = doc.data().category;
 
+                    if(category && !categories.includes(category)) {
+                        categories.push(category);
+                    }
+                    return categories;
+                }, [])
 
+                setCategories(["Todos", ...allCategories])
+            });
+    }, [categories]);
+
+    
     return (
         <div className="categoryBtns">
             {categories.map((category) => {
-                    if (category == "Todos") {
+                    if (category === "Todos") {
                         return <button className="categoryBtn"><Link to={`/productos`}>{category}</Link></button>
                     }
                     else {

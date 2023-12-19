@@ -7,8 +7,8 @@ const Item = ({product}) => {
     return (
         <Link to={`/productos/${product.category}/${product.id}`} className="item" key={product.id}>
             <img src={product.pictureUrl} alt={product.altImg}/>
-            <h3>{product.title}</h3>
-            <p>${product.price}</p>
+            <h3>{product.nombre}</h3>
+            <p>${product.precio}</p>
         </Link>
     )
 };

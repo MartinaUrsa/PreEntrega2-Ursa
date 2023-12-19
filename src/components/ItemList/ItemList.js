@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 // Style
 import "./_ItemList.scss";
 // Components
@@ -6,7 +5,6 @@ import Item from "./Item";
 import FilterCategoryBtn from "../FilterCategoryBtn/FilterCategoryBtn";
 
 const ItemList = ( {products, titulo} ) => {
-
     return (
         <div>
             <div className="categoryTitle">
@@ -18,11 +16,9 @@ const ItemList = ( {products, titulo} ) => {
 
             <div className="items-container">
                 {
-                    products.map((product) => {
-                        return (
-                            <Item key={product.id} product={product}/>
-                        )
-                    })
+                    products.map((product) => (
+                        <Item key={product.id} product={product}/>
+                    ))
                 }
             </div>
         </div>

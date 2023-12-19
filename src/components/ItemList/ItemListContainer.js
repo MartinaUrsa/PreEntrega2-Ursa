@@ -2,42 +2,36 @@
 import "./_ItemList.scss";
 // Components
 import ItemList from './ItemList.js';
-// Data
-import data from "../../data/data.json";
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
+
+// Firebase
+// collection nos permite traer una colección en particular de nuestra db
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config.js";
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [titulo, setTitulo] = useState("Productos")
+    const { category } = useParams();
 
-    const category = useParams().category;
-
-
-    const getProducts = () => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(data)
-            }, 1000)
-        })
-    }
 
     useEffect(() => {
-        getProducts()
+        // Accedemos a la colección
+        const productsRef = collection( db, "products" );
+        const  q = category ? query(productsRef, where("category", "==", category)) : productsRef // where(campo a verificar, tipo de comparación, a qué queremos que compare)
+
+        // getDocs() devuelve siempre una promesa
+        getDocs(q)
             .then((res) => {
-                if(category) {
-                    setTitulo(category)
-                    setProducts(res.filter((prod) => prod.category === category));
-                    setLoading(false);
-                }
-                else {
-                    setTitulo("Productos")
-                    setProducts(res);
-                    setLoading(false);
-                }
-            });
+                setProducts(res.docs.map((doc) => (
+                    {...doc.data(), id: doc.id}
+                )));
+                setLoading(false);
+                setTitulo(category ? category : "Productos")
+            })
     }, [category])
 
     return (

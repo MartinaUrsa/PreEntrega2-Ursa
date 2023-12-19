@@ -19,10 +19,10 @@ const CartItemCard = () => {
                         <Link to={`/productos/${prod.category}/${prod.id}`}>
                         <img src={prod.pictureUrl}/>
                         <div key={prod.id} className="info-prod">
-                            <h3 className="title">{prod.title}</h3>
-                            <p>Precio unitario: ${prod.price}</p>
+                            <h3 className="title">{prod.nombre}</h3>
+                            <p>Precio unitario: ${prod.precio}</p>
                             <p>Cantidad: {prod.quantity}</p>
-                            <p>Precio total: ${prod.price * prod.quantity}</p>
+                            <p>Precio total: ${prod.precio * prod.quantity}</p>
                         </div>
                         </Link>
                         <MdClose onClick={() => deleteItem(prod)} className="delete-item-icon"/>

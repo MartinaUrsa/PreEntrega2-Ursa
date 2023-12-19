@@ -8,7 +8,7 @@ import { CartContext } from "../Context/CartContext.js";
 
 const ItemDetail = ( {product} ) => {
 
-    const {pictureUrl, altImg, title, price, description} = product;
+    const {pictureUrl, altImg, nombre, precio, description} = product;
 
     const navigate = useNavigate();
 
@@ -35,8 +35,8 @@ const ItemDetail = ( {product} ) => {
                 <img src={pictureUrl} alt={altImg}/>
 
                 <div className="item-info">
-                    <h3>{title}</h3>
-                    <p className="price">${price}</p>
+                    <h3>{nombre}</h3>
+                    <p className="price">${precio}</p>
                     <p className="description">{description}</p>
 
                     <div className="actions-container">

@@ -12,9 +12,10 @@ import Nosotros from "./pages/Nosotros.js";
 import Error404 from "./components/Error404/Error404.js";
 import CartContextProvider from "./components/Context/CartContext.js";
 import Cart from "./pages/Cart/Cart.js";
+import Checkout from "./components/Checkout/Checkout.js";
+
 
 function App() {
-
   return (
     <CartContextProvider>
         <BrowserRouter>
@@ -33,10 +34,10 @@ function App() {
                 <Route path="/productos/trampas-magneticas" element="Proximamente..." />
 
                 <Route path="/cart" element={<Cart />}/>
-                {/* <Route path="/cart/checkout" element={<Checkout />}/> */}
+                <Route path="/cart/checkout" element={<Checkout />}/>
             </Route>
 
-            <Route path="*" element={<Error404 />}/>
+            <Route path="/*" element={<Error404 />}/>
           </Routes>
         </BrowserRouter>
         
