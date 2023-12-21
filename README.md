@@ -1,3 +1,18 @@
+## E-Commerce KACZUR
+### Proyecto final React - CoderHouse
+
+Este proyecto fue llevado a cabo durante el curso de React de CoderHouse.
+El mismo corresponde a un E-Commerce para un negocio. 
+Lo primero que se ve al ingresar a la página, es la landing page, donde se observa rápidamente a qué se dedica el negocio y cuáles son los artículos a la venta. 
+Luego, en la página "Productos", se encuentran algunos de los artículos comercializados por la marca, pudiendo ver la totalidad de los mismos, o filtrarlos por categorías.
+Se buscó que la página pueda ser recorrida de forma fluída e intuitiva, manteniendo siempre una misma estética y diseño para que la experiencia sea, no solo cómoda, sino agradable a la vista.
+
+
+### React-Hook-Form
+Se decidió hacer uso de esta librería para simplificar la implementación del formulario en el checkout de la página, permitiendo validar la información ingresada por el usuario. 
+
+--------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

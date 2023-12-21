@@ -4,7 +4,7 @@ import "./_ItemList.scss";
 import ItemList from './ItemList.js';
 
 import { useEffect, useState } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // Firebase
 // collection nos permite traer una colección en particular de nuestra db

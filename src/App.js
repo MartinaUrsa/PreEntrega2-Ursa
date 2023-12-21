@@ -14,7 +14,6 @@ import CartContextProvider from "./components/Context/CartContext.js";
 import Cart from "./pages/Cart/Cart.js";
 import Checkout from "./components/Checkout/Checkout.js";
 
-
 function App() {
   return (
     <CartContextProvider>
@@ -34,7 +33,7 @@ function App() {
                 <Route path="/productos/trampas-magneticas" element="Proximamente..." />
 
                 <Route path="/cart" element={<Cart />}/>
-                <Route path="/cart/checkout" element={<Checkout />}/>
+                <Route path="/checkout" element={<Checkout />}/>
             </Route>
 
             <Route path="/*" element={<Error404 />}/>

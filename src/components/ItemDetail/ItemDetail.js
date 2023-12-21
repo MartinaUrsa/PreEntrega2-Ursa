@@ -12,8 +12,7 @@ const ItemDetail = ( {product} ) => {
 
     const navigate = useNavigate();
 
-    const { carrito, addToCart } = useContext(CartContext);
-    console.log(carrito);
+    const { onAdd } = useContext(CartContext);
 
     const [quantity, setQuantity] = useState(1);
 
@@ -44,7 +43,7 @@ const ItemDetail = ( {product} ) => {
                             quantity={quantity} 
                             handleClickResta={handleClickResta} 
                             handleClickSuma={handleClickSuma}
-                            handleAddToCart={() => {addToCart(product, quantity)}}/>  
+                            handleOnAdd={() => {onAdd(product, quantity)}}/>  
                         {/* Botón para volver a la página anterior */}
                         <button className="volver" onClick={() => navigate(-1)}>Volver</button>
                     </div>

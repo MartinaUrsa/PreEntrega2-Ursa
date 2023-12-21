@@ -1,7 +1,7 @@
 import './_ItemCount.scss';
 
 // ItemCount
-const ItemCount = ({quantity, handleClickResta, handleClickSuma, handleAddToCart}) => (
+const ItemCount = ({quantity, handleClickResta, handleClickSuma, handleOnAdd}) => (
 
     <div className='cart-actions-container'>
         <div className='cart-btn-div'>
@@ -10,7 +10,7 @@ const ItemCount = ({quantity, handleClickResta, handleClickSuma, handleAddToCart
             <button className="cart-btn" onClick={handleClickSuma}>+</button>
         </div>
 
-        <button className='add-cart-btn' onClick={handleAddToCart}>Agregar al carrito</button>
+        <button className='add-cart-btn' onClick={handleOnAdd}>Agregar al carrito</button>
     </div>
     
 )

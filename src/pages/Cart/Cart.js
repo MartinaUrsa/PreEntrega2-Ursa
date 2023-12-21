@@ -32,7 +32,7 @@ const Cart = () => {
                     <CartItemCard />
                     <div className="checkout-btns">
                         <div className="cart-total">Total carrito: ${precioTotal()}</div>
-                        <Link to="/cart/checkout"><button className="checkout">Ir a pagar</button></Link>
+                        <Link to="/checkout"><button className="checkout">Ir a pagar</button></Link>
                         
                     </div>
                 </div>

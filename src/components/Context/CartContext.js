@@ -7,7 +7,7 @@ const CartContextProvider = ({children}) => {
 
     const [carrito, setCarrito] = useState([]);
 
-    const addToCart = (product, quantity) => {
+    const onAdd = (product, quantity) => {
         const addedItem = {...product, quantity};
     
         const isInCart = carrito.find((product) => product.id === addedItem.id);
@@ -43,7 +43,7 @@ const CartContextProvider = ({children}) => {
     return (
         <CartContext.Provider value={ {
             carrito, 
-            addToCart, 
+            onAdd, 
             cartQuantity, 
             precioTotal, 
             emptyCart,
