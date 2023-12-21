@@ -106,7 +106,7 @@ const Checkout = () => {
                             {...register("phone", { required: "Campo requerido" })} 
                             placeholder="+54 9 11 1111 1111" 
                             id="tel" />    
-                            {errors.phone && <p style={{color: "red", fontSize: "13px", fontWeight: "500"}}>{errors.email.phone}</p>}
+                            {errors.phone && <p style={{color: "red", fontSize: "13px", fontWeight: "500"}}>{errors.phone.message}</p>}
                     </div>
                 </div>
                 <button className="submit-btn" type="submit">Hacer pedido</button>
