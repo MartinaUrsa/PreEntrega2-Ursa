@@ -10,8 +10,6 @@ import { db } from "../../firebase/config";
 const Checkout = () => {
 
     const [ orderId, setOrderId ] = useState("");
-    
-    const [ loading, setLoading ] = useState(false);
 
     const navigate = useNavigate();
 
@@ -21,8 +19,6 @@ const Checkout = () => {
 
 
     const terminarCompra = (data) => {
-        setLoading(true);
-
         const order = {
             cliente: data, 
             productos: carrito,
@@ -38,12 +34,7 @@ const Checkout = () => {
             })
     }
 
-        if(loading) {
-            return <h2>Se está generando tu orden...</h2>
-        }
-
         if(orderId) {
-            setLoading(false);
             return (
                 <div className="container">
                     <h2>¡Muchas gracias por tu compra!</h2>
